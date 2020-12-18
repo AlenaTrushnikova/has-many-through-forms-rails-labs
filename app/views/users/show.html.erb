@@ -1,1 +1,5 @@
 
+<h2> <%= @user.username%> commented on the following posts: </h2> <br>
+<% @user.uniq_posts.each do |post|%>
+    <%= link_to post.title, post_path(post)%><br>
+<% end %>
